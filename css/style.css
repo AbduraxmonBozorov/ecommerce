@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-main .chairCard .chair_item div.colors div, main.main .cards3, header .header-links .nav, header .search .help .shoping i, header .search .help .shoping, header .search .help .account, header .search .help, header .search .searcInp, header .search .logo, header .search {
+.a-community .accomunitydoing, .a-community, main .chairCard .chair_item div.colors div, main.main .cards3, header .header-links .nav, header .search .help .shoping i, header .search .help .shoping, header .search .help .account, header .search .help, header .search .searcInp, header .search .logo, header .search {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -167,10 +167,17 @@ header .header-links .nav .active div {
 }
 
 main.main {
-  background-color: #f5f6f8;
-  background-size: 100% 400px;
   min-height: 600px;
   padding-top: 24px;
+  position: relative;
+}
+main.main .mainbg {
+  width: 100%;
+  height: 400px;
+  background-color: #f5f6f8;
+  position: absolute;
+  z-index: -1;
+  top: 0;
 }
 main.main .cards3 {
   justify-content: flex-start;
@@ -183,12 +190,18 @@ main.main .cards3 .card {
   position: relative;
   cursor: pointer;
   margin-right: 24px;
+  overflow: hidden;
+  cursor: pointer;
+}
+main.main .cards3 .card:hover img {
+  transform: scale(1.2);
 }
 
 .cards3 .card img {
   width: 424px;
   height: 180px;
   border-radius: 5px;
+  transition: all 0.3s linear;
 }
 
 .cards3 .card h2 {
@@ -208,6 +221,7 @@ main .chairCard {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: 48px;
 }
 main .chairCard .chair_item {
   width: 312px;
@@ -220,15 +234,20 @@ main .chairCard .chair_item {
   align-items: center;
   position: relative;
   margin-right: 24px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+main .chairCard .chair_item:hover {
+  transform: scale(1.1);
 }
 main .chairCard .chair_item:nth-child(2) {
-  background-color: #FFE4BD;
+  background-color: #ffe4bd;
 }
 main .chairCard .chair_item:nth-child(3) {
-  background-color: #D9ABFD;
+  background-color: #d9abfd;
 }
 main .chairCard .chair_item:nth-child(4) {
-  background-color: #FDF0AB;
+  background-color: #fdf0ab;
 }
 main .chairCard .chair_item .heartIcon {
   position: absolute;
@@ -307,8 +326,50 @@ main .chairCard .chair_item div.colors div span:nth-child(7) {
   font-weight: 500;
   line-height: 18px;
   text-align: left;
-  color: #3E3E3E;
+  color: #3e3e3e;
   display: block;
   width: 100%;
   margin-top: 10px;
+}
+
+.a-community {
+  justify-content: flex-start;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.a-community .accomunitydoing {
+  width: 424px;
+  height: 174px;
+  border-radius: 5px;
+  background-color: #F5F6F8;
+  padding: 24px;
+  justify-content: space-between;
+  transition: all 0.3s linear;
+}
+.a-community .accomunitydoing:hover {
+  box-shadow: 0px 7px 5px #fdf0ab;
+}
+.a-community .accomunitydoing div {
+  padding-width: 176px;
+  padding-height: 32px;
+  padding-font-family: "Poppins";
+  padding-font-size: 12px;
+  padding-font-weight: 400;
+  padding-line-height: 16px;
+  padding-text-align: left;
+  padding-color: black;
+}
+.a-community .accomunitydoing div h4 {
+  height: 40px;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+  color: black;
+  margin-bottom: 12px;
+}
+.a-community .accomunitydoing img {
+  width: 126px;
+  height: 126px;
 }/*# sourceMappingURL=style.css.map */
