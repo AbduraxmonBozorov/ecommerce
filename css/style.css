@@ -73,6 +73,7 @@ header .search .searcInp input[type=search] {
 }
 header .search .searcInp input[type=search]:focus {
   border: 1px solid white;
+  outline-color: transparent;
 }
 header .search .help button {
   width: 88px;
